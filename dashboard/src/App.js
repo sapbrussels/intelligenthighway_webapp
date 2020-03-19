@@ -1,12 +1,24 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
 
-function App() {
-  return (
-    <Button variant="contained" color="primary">
-      Hello world
-    </Button>
-  );
+import Paper from '@material-ui/core/Paper';
+
+
+
+import Image from './streetlights.png'; // Import using relative path
+
+
+const styles = {
+    paperContainer: {
+        backgroundImage: `url(${Image})`
+    }
+};
+
+export default class Home extends React.Component{
+    render(){
+        return(
+            <Paper style={styles.paperContainer}>
+                Some text to fill the Paper Component
+            </Paper>
+        )
+    }
 }
-
-export default App;
