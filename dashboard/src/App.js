@@ -20,7 +20,7 @@ export default function SignInSide() {
     const classes = useStyles();
       
     return (
-      <item xs={false} sm={4} md={7} className={classes.image} />
+        <img src="/streetlights.png"/>
        
     );
 }
