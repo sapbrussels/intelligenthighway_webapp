@@ -28,7 +28,12 @@
   color: #61dafb;
 }
 .background{
-  background-image : url("/streetlights.png/") ;
+  background-image : url("/streetlights.png/");
+  background-color: #cccccc;
+  height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @keyframes App-logo-spin {
