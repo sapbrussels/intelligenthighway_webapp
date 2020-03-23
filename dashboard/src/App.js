@@ -9,7 +9,13 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
-import { grey } from '@material-ui/core/colors';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 
 
 const useStyles = makeStyles(theme => ({
@@ -20,7 +26,7 @@ const useStyles = makeStyles(theme => ({
       backgroundImage: 'url("./streetlight.jpg")',
       backgroundRepeat: 'no-repeat',
       backgroundColor:
-        theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+        theme.palette.type === 'dark' ? theme.palette.grey[50] : theme.palette.grey[900],
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       height: "100vh",
@@ -40,8 +46,9 @@ const useStyles = makeStyles(theme => ({
     form: {
         width: '50%', // Fix IE 11 issue.
         marginTop: theme.spacing(10),
-        backgroundColor: grey,
-        color:"blue",
+        backgroundColor: 'white',
+        padding: '20px',
+        borderRadius:'10px',
     },
       submit: {
         margin: theme.spacing(3, 0, 2),
@@ -49,7 +56,41 @@ const useStyles = makeStyles(theme => ({
     },
     
 }));
-export default function SignInSide() {
+export default function BasicExample() {
+    return (
+      <Router>
+        <div>
+          <ul>
+            <li>
+              <Link to="/">SignInSide</Link>
+            </li>
+            <li>
+              <Link to="/Jobs">jobs</Link>
+            </li>
+          </ul>
+  
+          <hr />
+  
+          {/*
+            A <Switch> looks through all its children <Route>
+            elements and renders the first one whose path
+            matches the current URL. Use a <Switch> any time
+            you have multiple routes, but you want only one
+            of them to render at a time
+          */}
+          <Switch>
+            <Route exact path="/">
+              <SignInSide/>
+            </Route>
+            <Route path="/jobs">
+              <jobs/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+function SignInSide() {
     const classes = useStyles();
 
     return (
@@ -104,4 +145,12 @@ export default function SignInSide() {
      </div>  
     </Container>
  );
-}
+} 
+
+function jobs(){
+    return(
+        <div>
+            <h2>jobs</h2>
+        </div>
+    );
+} 
