@@ -38,12 +38,14 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.secondary.main,
     },
     form: {
-        width: '90%', // Fix IE 11 issue.
+        width: '50%', // Fix IE 11 issue.
         marginTop: theme.spacing(10),
         backgroundColor: grey,
+        color:"blue",
     },
       submit: {
         margin: theme.spacing(3, 0, 2),
+        color:"blue",
     },
     
 }));
@@ -85,14 +87,14 @@ export default function SignInSide() {
                     autoComplete="current-password"
                 />
                 <FormControlLabel
-                    control={<Checkbox value="remember" color="grey" />}
+                    control={<Checkbox value="remember" />}
                     label="Remember me"
                 />
                 <Button
                     type="submit"
                     fullWidth
                     variant="contained"
-                    color="grey"
+                    color="green"
                     className={classes.submit}
                 >
                     Sign In
