@@ -9,13 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-  
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -56,40 +50,7 @@ const useStyles = makeStyles(theme => ({
     },
     
 }));
-export default function BasicExample() {
-    return (
-      <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">SignInSide</Link>
-            </li>
-            <li>
-              <Link to="/Jobs">jobs</Link>
-            </li>
-          </ul>
-  
-          <hr />
-  
-          {/*
-            A <Switch> looks through all its children <Route>
-            elements and renders the first one whose path
-            matches the current URL. Use a <Switch> any time
-            you have multiple routes, but you want only one
-            of them to render at a time
-          */}
-          <Switch>
-            <Route exact path="/">
-              <SignInSide/>
-            </Route>
-            <Route path="/jobs">
-              <jobs/>
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    );
-  }
+
 function SignInSide() {
     const classes = useStyles();
 
@@ -145,12 +106,4 @@ function SignInSide() {
      </div>  
     </Container>
  );
-} 
-
-function jobs(){
-    return(
-        <div>
-            <h2>jobs</h2>
-        </div>
-    );
-} 
+} export default SignInSide
