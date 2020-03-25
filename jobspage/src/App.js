@@ -17,8 +17,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems} from './listItems';
-import Orders from './Orders';
-import Deposits from'./Deposits';
+import LightStatus from './LightStatus';
+import Maps from './Maps';
+import Jobslist from './Jobslist';
+
 
 
 const drawerWidth = 240;
@@ -155,17 +157,23 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}> {/* lg */}
-          <Grid container spacing={2}>
-            {/* Chart */}
+          <Grid container spacing={3}>
+            {/* LighStatus */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <Orders />{/*light status*/}
+                <LightStatus />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+            {/* Jobs list */}
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <Jobslist />
+              </Paper>
+            </Grid>
+            {/* Maps */} 
             <Grid item xs={12}>
               <Paper className={classes.map}>
-                <Deposits />{/*map*/}
+                <Maps/>
               </Paper>
             </Grid>
           </Grid>

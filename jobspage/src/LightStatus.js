@@ -6,17 +6,26 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Rectangle from 'react-rectangle';
 import Title from './Title';
 
+
+
 // Generate Order Data
-function createData(id, street_light, status) {
-  return { street_light, status };
+function createData(id, street_light, status,light) {
+  return { street_light, status, light};
 }
 
 const rows = [
-  createData(0, 'Boulevard Avroy 1.9', 'ON'),
-  createData(1, 'Rue de Londres 2.1', 'OFF'),
-  createData(2, 'Rue de Londres 2.3', 'X'),
+  createData(0, 'Boulevard Avroy 1.9', 'ON', <Rectangle aspectRatio={[3,3]}>
+  <div style={{ background: '#008000', width: '100%', height: '100%' }} />
+</Rectangle>),
+  createData(1, 'Rue de Londres 2.1', 'OFF',<Rectangle aspectRatio={[3,3]}>
+  <div style={{ background: '#FFFFFF', width: '100%', height: '100%' }} />
+</Rectangle>),
+  createData(2, 'Rue de Londres 2.3', 'X',<Rectangle aspectRatio={[3,3]}>
+  <div style={{ background: '#FF0000', width: '100%', height: '100%' }} />
+</Rectangle>),
 ];
 
 function preventDefault(event) {
@@ -26,10 +35,12 @@ function preventDefault(event) {
 const useStyles = makeStyles((theme) => ({
   seeMore: {
     marginTop: theme.spacing(3),
+    padding: '20px',
+    borderRadius:'10px',
   },
 }));
 
-export default function Orders() {
+export default function LightStatus() {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -39,13 +50,15 @@ export default function Orders() {
           <TableRow>
             <TableCell>street light</TableCell>
             <TableCell>status</TableCell>
+            <TableCell></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell>{row.street_light}</TableCell>
-              <TableCell>{row.status}</TableCell>
+              <TableCell> {row.status}</TableCell>
+              <TableCell> {row.light}</TableCell>
             </TableRow>
           ))}
         </TableBody>
