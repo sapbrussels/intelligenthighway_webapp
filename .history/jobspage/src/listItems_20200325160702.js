@@ -6,13 +6,14 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 
+
 export const mainListItems = (
   <div>
-    <ListItem > 
+    <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText  primary="jobs page" />
+      <ListItemText onClick={()=>jobspage.push('/Login')} primary="jobs page" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>

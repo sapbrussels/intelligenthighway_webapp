@@ -100,8 +100,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   map:{
-    width:70,
-    height:70,
+    padding: theme.spacing(2),
+    display: 'flex',
+    overflow: 'auto',
+    flexDirection: 'column',
   }
 }));
 
@@ -172,7 +174,7 @@ export default function Dashboard() {
             </Grid>
             {/* Maps */} 
             <Grid item xs={12}>
-              <Paper className={classes.map}>
+              <Paper >
                 <Maps/>
               </Paper>
             </Grid>

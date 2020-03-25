@@ -16,10 +16,12 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import {BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 import { mainListItems} from './listItems';
 import LightStatus from './LightStatus';
 import Maps from './Maps';
 import Jobslist from './Jobslist';
+import Login from './Login';
 
 
 
@@ -104,8 +106,36 @@ const useStyles = makeStyles((theme) => ({
     height:70,
   }
 }));
+export default function App() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/Login"></Link>
+            </li>
+          </ul>
+        </nav>
 
-export default function Dashboard() {
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/Login">
+            <About />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {

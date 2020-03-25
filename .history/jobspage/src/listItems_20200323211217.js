@@ -8,11 +8,11 @@ import PeopleIcon from '@material-ui/icons/People';
 
 export const mainListItems = (
   <div>
-    <ListItem > 
+    <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText  primary="jobs page" />
+      <ListItemText primary="jobs page" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
