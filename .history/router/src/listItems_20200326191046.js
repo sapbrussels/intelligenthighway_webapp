@@ -20,7 +20,7 @@ export const mainListItems = (
           <ListItemIcon>
             <ShoppingCartIcon />
           </ListItemIcon>
-          <ListItemText primary="History" />
+          <ListItemText primary="maintenance" />
         </ListItem></Link>
       <Link to='/Help'>
           <ListItem button>

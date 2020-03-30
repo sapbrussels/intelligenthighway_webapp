@@ -98,7 +98,7 @@ export default function Album() {
                       Fixing lights
                     </Typography>
                     <Typography>
-                      This article will help you all issues related to fixing light
+                      This is a media card. You can use this section to describe the content.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -120,7 +120,7 @@ export default function Album() {
                       Help filling in forms
                     </Typography>
                     <Typography>
-                      Having trouble filling in your forms ? Find in this article a step by step guide as answers to relevant issue.
+                      This is a media card. You can use this section to describe the content.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -139,10 +139,10 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Safety
+                      Heading
                     </Typography>
                     <Typography>
-                      Worried about your safety ? Find answers to all your questions here.
+                      This is a media card. You can use this section to describe the content.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -156,64 +156,23 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Location.png"
+                    image="https://source.unsplash.com/random"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Location
+                      Heading
                     </Typography>
                     <Typography>
-                     Having trouble finding the location of your job? Find more info here.
+                      This is a media card. You can use this section to describe the content.
                     </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
                       View
                     </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-              <Grid item xs={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="Payement.png"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Payement
-                    </Typography>
-                    <Typography>
-                     Having issues with your payement ? Find answers here.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
                     <Button size="small" color="primary">
-                      View
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-              <Grid item xs={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="contact.png"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Contact
-                    </Typography>
-                    <Typography>
-                      Can't find your issue on this page ? Contact the helpdesk.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
+                      Edit
                     </Button>
                   </CardActions>
                 </Card>

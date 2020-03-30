@@ -178,15 +178,15 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Payement.png"
+                    image=""
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Payement
+                      Heading
                     </Typography>
                     <Typography>
-                     Having issues with your payement ? Find answers here.
+                      This is a media card. You can use this section to describe the content.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -214,6 +214,9 @@ export default function Album() {
                   <CardActions>
                     <Button size="small" color="primary">
                       View
+                    </Button>
+                    <Button size="small" color="primary">
+                      Edit
                     </Button>
                   </CardActions>
                 </Card>

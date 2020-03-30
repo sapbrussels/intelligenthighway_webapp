@@ -142,13 +142,13 @@ export default function Dashboard() {
           <h1>Location<body>Boulevard d'avroy</body></h1> 
           <Grid container spacing={2}>
             {/* Recent Deposits */}
-            <Grid item md={12} >
+            <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <Checklist />
               </Paper>
             </Grid>
             {/* Recent Orders */}
-            <Grid item md={12}>
+            <Grid item xs={12}>
               <Paper className={classes.paper}>
               <Direction/>
               </Paper>
