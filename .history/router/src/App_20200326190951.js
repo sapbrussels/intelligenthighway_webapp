@@ -4,8 +4,8 @@ import './App.css';
 import Login from './Login';
 import Jobspage from'./Jobspage';
 import Maintenance from './Maintenance';
-import Help from './Help';
-import Problempage from './Problempage';
+import Help from'./Help';
+
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
      <Route path='/Jobspage' exact component={Jobspage}/>
      <Route path='/Maintenance' exact component={Maintenance}/>
      <Route path='/Help' exact component={Help}/>
-     <Route path='/Problempage' exact component={Problempage}/>
      </Switch>
     </BrowserRouter>
     

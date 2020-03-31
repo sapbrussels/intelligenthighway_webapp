@@ -15,8 +15,7 @@ function createData(id, location, job, accept, info) {
 
 const rows = [
     createData(0, 'Boulevard Avroy 1.9', 'Maintenance',<Link to="/Maintenance"><button>Accept</button></Link>),
-    createData(1, 'Rue de Londres 2.1', 'Fix issue',<button>Accept</button>, <Link to="/Problempage"><button>find more info</button></Link>),
-];
+]
 
 function preventDefault(event) {
   event.preventDefault();
@@ -34,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
     return (
         <React.Fragment>
-        <Title>jobs available</Title>
+        <Title>Community Data</Title>
         <Table size="small">
             <TableHead>
             <TableRow>

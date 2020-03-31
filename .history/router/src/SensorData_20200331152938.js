@@ -9,13 +9,13 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
 // Generate Order Data
-function createData(id, location, job, accept, info) {
-  return { id, location, job, accept, info };
+function createData(id,Sensorstatus, OutsideTemp, Life) {
+  return { id,Sensorstatus, OutsideTemp, Life};
 }
 
 const rows = [
-    createData(0, 'Boulevard Avroy 1.9', 'Maintenance',<Link to="/Maintenance"><button>Accept</button></Link>),
-    createData(1, 'Rue de Londres 2.1', 'Fix issue',<button>Accept</button>, <Link to="/Problempage"><button>find more info</button></Link>),
+    createData(0, 'ON', '14°C', '5000 Hours')
+    
 ];
 
 function preventDefault(event) {
@@ -25,7 +25,7 @@ function preventDefault(event) {
 const useStyles = makeStyles((theme) => ({
   seeMore: {
     marginTop: theme.spacing(3),
-    padding: '20px',
+    padding: '30px',
     borderRadius:'10px',
   },
 }));
@@ -38,28 +38,23 @@ const useStyles = makeStyles((theme) => ({
         <Table size="small">
             <TableHead>
             <TableRow>
-                <TableCell>location</TableCell>
-                <TableCell>job</TableCell>
-                <TableCell>Accept the job</TableCell>
-                <TableCell>More info</TableCell>
+                <TableCell>Sensorstatus</TableCell>
+                <TableCell>OutsideTemp</TableCell>
+                <TableCell>Life</TableCell>
+               
             </TableRow>
             </TableHead>
             <TableBody>
             {rows.map((row) => (
                 <TableRow key={row.id}>
-                <TableCell>{row.location}</TableCell>
-                <TableCell>{row.job}</TableCell>
-                <TableCell>{row.accept}</TableCell>
-                <TableCell>{row.info}</TableCell>
+                <TableCell>{row.Sensorstatus}</TableCell>
+                <TableCell>{row.OutsideTemp}</TableCell>
+                <TableCell>{row.Life}</TableCell>
                 </TableRow>
             ))}
             </TableBody>
         </Table>
-        <div className={classes.seeMore}>
-            <Link color="primary" href="#" onClick={preventDefault}>
-            See more orders
-            </Link>
-        </div>
+        
         </React.Fragment>
     );
 } 

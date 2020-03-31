@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
     return (
         <React.Fragment>
-        <Title>jobs available</Title>
+        <Title>Community Data</Title>
         <Table size="small">
             <TableHead>
             <TableRow>

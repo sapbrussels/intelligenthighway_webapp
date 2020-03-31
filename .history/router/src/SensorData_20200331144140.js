@@ -9,8 +9,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
 // Generate Order Data
-function createData(id, location, job, accept, info) {
-  return { id, location, job, accept, info };
+function createData(id, sensorstatus, voltage) {
+  return { id, sensorstatus, voltage};
 }
 
 const rows = [

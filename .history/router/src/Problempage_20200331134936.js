@@ -14,7 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-
+ 
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+
   },
- 
   cardMedia: {
     paddingTop: '100%', // 16:9
   },
@@ -70,14 +70,14 @@ export default function Album() {
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Help page
+              Problem page
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Link to='/Jobspage'><Button variant="contained" color="primary">
-                    Back to home
-                  </Button></Link>
+                <Typography component="body" variant="h2" align="center" color="blue" gutterBottom>
+                 Rue de Londres 2.1
+                </Typography>
                 </Grid>
               </Grid>
             </div>
@@ -85,20 +85,20 @@ export default function Album() {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
-            <Grid container spacing={3}>
-              <Grid item xs={4}>
+            <Grid container spacing={2}>
+            <Grid item xs={4}sm={3} >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Broken ligth.jpg"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Fixing lights
+                      Contact
                     </Typography>
                     <Typography>
-                      This article will help you all issues related to fixing light
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -108,19 +108,19 @@ export default function Album() {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4}sm={3} >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Form.jpeg"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Help filling in forms
+                      Contact
                     </Typography>
                     <Typography>
-                      Having trouble filling in your forms ? Find in this article a step by step guide as answers to relevant issue.
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -130,19 +130,19 @@ export default function Album() {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4}sm={3} >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="safety.png"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Safety
+                      Contact
                     </Typography>
                     <Typography>
-                      Worried about your safety ? Find answers to all your questions here.
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -152,19 +152,19 @@ export default function Album() {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4}sm={3} >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Location.png"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Location
+                      Contact
                     </Typography>
                     <Typography>
-                     Having trouble finding the location of your job? Find more info here.
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -174,19 +174,19 @@ export default function Album() {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={4}sm={3} >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Payement.png"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Payement
+                      Contact
                     </Typography>
                     <Typography>
-                     Having issues with your payement ? Find answers here.
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -196,7 +196,52 @@ export default function Album() {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item xs={4}>
+      
+              <Grid item xs={4}sm={3} >
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="contact.png"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Contact
+                    </Typography>
+                    <Typography>
+                      Can't find your issue on this page ? Contact the helpdesk.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}sm={3} >
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="contact.png"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Contact
+                    </Typography>
+                    <Typography>
+                      Can't find your issue on this page ? Contact the helpdesk.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item xs={4}sm={3} >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}

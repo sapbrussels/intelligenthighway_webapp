@@ -1,5 +1,6 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
+import HelpIcon from '@material-ui/icons/Help';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -67,8 +68,9 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
+          <HelpIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Problem page
+            Help
           </Typography>
         </Toolbar>
       </AppBar>

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,14 +8,13 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
 // Generate Order Data
-function createData(id, location, job, accept, info) {
-  return { id, location, job, accept, info };
+function createData(id, location, problem) {
+  return { id,location, problem };
 }
 
 const rows = [
-    createData(0, 'Boulevard Avroy 1.9', 'Maintenance',<Link to="/Maintenance"><button>Accept</button></Link>),
-    createData(1, 'Rue de Londres 2.1', 'Fix issue',<button>Accept</button>, <Link to="/Problempage"><button>find more info</button></Link>),
-];
+    createData(0, 'Boulevard Avroy 1.9', 'Light flickering'),
+]
 
 function preventDefault(event) {
   event.preventDefault();
@@ -34,32 +32,24 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
     return (
         <React.Fragment>
-        <Title>jobs available</Title>
+        <Title>Community Data</Title>
         <Table size="small">
             <TableHead>
             <TableRow>
                 <TableCell>location</TableCell>
-                <TableCell>job</TableCell>
-                <TableCell>Accept the job</TableCell>
-                <TableCell>More info</TableCell>
+                <TableCell>problem</TableCell>
             </TableRow>
             </TableHead>
             <TableBody>
             {rows.map((row) => (
                 <TableRow key={row.id}>
                 <TableCell>{row.location}</TableCell>
-                <TableCell>{row.job}</TableCell>
-                <TableCell>{row.accept}</TableCell>
-                <TableCell>{row.info}</TableCell>
+                <TableCell>{row.problem}</TableCell>
                 </TableRow>
             ))}
             </TableBody>
         </Table>
-        <div className={classes.seeMore}>
-            <Link color="primary" href="#" onClick={preventDefault}>
-            See more orders
-            </Link>
-        </div>
+     
         </React.Fragment>
     );
 } 

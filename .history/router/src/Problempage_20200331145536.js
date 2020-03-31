@@ -1,5 +1,6 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
+import HelpIcon from '@material-ui/icons/Help';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -7,8 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import SensorData from './SensorData';
-import CommunityData from './CommunityData';
+
 import Voltage from './Voltage';
 
 const useStyles = makeStyles((theme) => ({
@@ -47,12 +47,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
   },
   paper: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-
-  },
-  fixedheight:{
     height: 240,
   },
 }));
@@ -67,8 +61,9 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
+          <HelpIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Problem page
+            Help
           </Typography>
         </Toolbar>
       </AppBar>
@@ -94,19 +89,9 @@ export default function Album() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}> {/* lg */}
           <Grid container spacing={3}>
-          <Grid  item xs={12} > 
-              <Paper className={classes.fixedheight}>
+          <Grid  item xs={12} md={4} lg={3}> >
+              <Paper className={classes.paper}>
                 <Voltage />
-              </Paper>
-            </Grid>
-            <Grid  item xs={12} > 
-              <Paper className={classes.paper}>
-                <SensorData />
-              </Paper>
-            </Grid>
-            <Grid  item xs={12}> 
-              <Paper className={classes.paper}>
-                <CommunityData />
               </Paper>
             </Grid>
           </Grid>

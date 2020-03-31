@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
                 <TableCell>location</TableCell>
                 <TableCell>job</TableCell>
                 <TableCell>Accept the job</TableCell>
-                <TableCell>More info</TableCell>
             </TableRow>
             </TableHead>
             <TableBody>
@@ -50,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
                 <TableCell>{row.location}</TableCell>
                 <TableCell>{row.job}</TableCell>
                 <TableCell>{row.accept}</TableCell>
-                <TableCell>{row.info}</TableCell>
                 </TableRow>
             ))}
             </TableBody>

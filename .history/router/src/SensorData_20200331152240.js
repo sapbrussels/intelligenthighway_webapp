@@ -9,13 +9,13 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
 // Generate Order Data
-function createData(id, location, job, accept, info) {
-  return { id, location, job, accept, info };
+function createData(id,Sensorstatus) {
+  return { id,Sensorstatus};
 }
 
 const rows = [
-    createData(0, 'Boulevard Avroy 1.9', 'Maintenance',<Link to="/Maintenance"><button>Accept</button></Link>),
-    createData(1, 'Rue de Londres 2.1', 'Fix issue',<button>Accept</button>, <Link to="/Problempage"><button>find more info</button></Link>),
+    createData(0, 'ON')
+    
 ];
 
 function preventDefault(event) {
@@ -38,19 +38,14 @@ const useStyles = makeStyles((theme) => ({
         <Table size="small">
             <TableHead>
             <TableRow>
-                <TableCell>location</TableCell>
-                <TableCell>job</TableCell>
-                <TableCell>Accept the job</TableCell>
-                <TableCell>More info</TableCell>
+                <TableCell>Sensorstatus</TableCell>
+               
             </TableRow>
             </TableHead>
             <TableBody>
             {rows.map((row) => (
                 <TableRow key={row.id}>
-                <TableCell>{row.location}</TableCell>
-                <TableCell>{row.job}</TableCell>
-                <TableCell>{row.accept}</TableCell>
-                <TableCell>{row.info}</TableCell>
+                <TableCell>{row.Sensorstatus}</TableCell>
                 </TableRow>
             ))}
             </TableBody>
