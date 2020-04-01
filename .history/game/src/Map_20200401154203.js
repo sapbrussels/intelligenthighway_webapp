@@ -67,7 +67,7 @@ const mapStyles = {
                  <Marker
          onClick={this.onMarkerClick}
          title={'The marker`s title will appear as a tooltip.'}
-         name={'Bob'}
+         name={'Boulevard Léopold III 2.3'}
          position={{lat: 50.879417, lng:  4.393988}}
         
                 />

@@ -36,7 +36,7 @@ const mapStyles = {
     render() {
       return (
         <Map google={this.props.google}
-             zoom={13}
+             zoom={12}
              style={mapStyles}
              initialCenter={{
               lat: 50.87, 
@@ -47,7 +47,7 @@ const mapStyles = {
          onClick={this.onMarkerClick}
          title={'The marker`s title will appear as a tooltip.'}
          name={'Boulevard Léopold III 2.3'}
-         position={{lat: 50.879417, lng: 4.395179}}
+         position={{lat: 50.870959, lng: 4.405819}}
         
                 />
 
@@ -55,61 +55,17 @@ const mapStyles = {
          onClick={this.onMarkerClick}
          title={'The marker`s title will appear as a tooltip.'}
          name={'Boulevard Léopold III 2.4'}
-         position={{lat: 50.882778, lng: 4.406525}}
+         position={{lat: 50.870418, lng: 4.405306}}
                 />
 
          <Marker
          onClick={this.onMarkerClick}
          title={'The marker`s title will appear as a tooltip.'}
          name={'Boulevard Léopold III 2.5'}
-         position={{lat: 50.874043, lng: 4.397364}}
-                />       
-                 <Marker
-         onClick={this.onMarkerClick}
-         title={'The marker`s title will appear as a tooltip.'}
-         name={'Bob'}
-         position={{lat: 50.879417, lng:  4.393988}}
-        
-                />
-
-         <Marker
-         onClick={this.onMarkerClick }
-         title={'The marker`s title will appear as a tooltip.'}
-         name={'Harry'}
-         position={{lat:50.878756, lng: 4.400461}}
-                />
-
-         <Marker
-         onClick={this.onMarkerClick}
-         title={'The marker`s title will appear as a tooltip.'}
-         name={'Kate'}
-         position={{lat: 50.871773, lng:4.398320}}
+         position={{lat: 50.869850, lng: 4.404810}}
                 />       
         
          
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
-            <div>
-              <h1>{this.state.selectedPlace.name}</h1>
-            </div>
-        </InfoWindow>
-
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
-            <div>
-              <h1>{this.state.selectedPlace.name}</h1>
-            </div>
-        </InfoWindow>
-
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
-            <div>
-              <h1>{this.state.selectedPlace.name}</h1>
-            </div>
-        </InfoWindow>
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>

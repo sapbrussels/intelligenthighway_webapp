@@ -67,23 +67,23 @@ const mapStyles = {
                  <Marker
          onClick={this.onMarkerClick}
          title={'The marker`s title will appear as a tooltip.'}
-         name={'Bob'}
-         position={{lat: 50.879417, lng:  4.393988}}
+         name={'Boulevard Léopold III 2.3'}
+         position={{lat: 50.879417, lng: 4.395179}}
         
-                />
-
-         <Marker
-         onClick={this.onMarkerClick }
-         title={'The marker`s title will appear as a tooltip.'}
-         name={'Harry'}
-         position={{lat:50.878756, lng: 4.400461}}
                 />
 
          <Marker
          onClick={this.onMarkerClick}
          title={'The marker`s title will appear as a tooltip.'}
-         name={'Kate'}
-         position={{lat: 50.871773, lng:4.398320}}
+         name={'Boulevard Léopold III 2.4'}
+         position={{lat: 50.882778, lng: 4.406525}}
+                />
+
+         <Marker
+         onClick={this.onMarkerClick}
+         title={'The marker`s title will appear as a tooltip.'}
+         name={'Boulevard Léopold III 2.5'}
+         position={{lat: 50.874043, lng: 4.397364}}
                 />       
         
          

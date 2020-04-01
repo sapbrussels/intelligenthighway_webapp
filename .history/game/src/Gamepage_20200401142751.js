@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import HelpIcon from '@material-ui/icons/Help';
 import Card from '@material-ui/core/Card';
+import { Link } from "react-router-dom";
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -69,14 +70,14 @@ export default function Album() {
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-             Timer :
+              Help page
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                 <Typography component="h3">
-                   2:30 sec
-                 </Typography>
+                  <Link to='/Jobspage'><Button variant="contained" color="primary">
+                    Back to home
+                  </Button></Link>
                 </Grid>
               </Grid>
             </div>
@@ -94,16 +95,10 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Andy
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -122,16 +117,10 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                     Kelly
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -150,16 +139,10 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Rob
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -173,21 +156,15 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="John.jpeg"
+                    image="John.jpegK"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                     John
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -206,16 +183,10 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Kate
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -230,21 +201,15 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Jane.jpeg"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Jane
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -258,21 +223,15 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Harry.jpeg"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Harry
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -286,21 +245,15 @@ export default function Album() {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="Bob.jpeg"
+                    image="contact.png"
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Bob
+                      Contact
                     </Typography>
                     <Typography>
-                     Skill set : good
-                     </Typography>
-                    <Typography>
-                     Position : 1
-                     </Typography>
-                     <Typography>
-                     Tools for job : Yes
+                      Can't find your issue on this page ? Contact the helpdesk.
                     </Typography>
                   </CardContent>
                   <CardActions>
