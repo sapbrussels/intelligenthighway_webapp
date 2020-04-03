@@ -38,6 +38,7 @@ const markerstyle = {
     };
    
     render() {
+      const classes = useStyles();
       return (
         <Map google={this.props.google}
              zoom={14}

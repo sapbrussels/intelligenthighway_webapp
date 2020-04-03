@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
   },
   map:{
     padding: theme.spacing(2),
-    display: 'center',
+    display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
   }
@@ -173,9 +173,9 @@ export default function Dashboard() {
               </Paper>
             </Grid>
             <Grid item xs={10}>
-              <Paper >
+              
                 <Maps/>
-              </Paper>
+             
             </Grid>
           </Grid>
         </Container>

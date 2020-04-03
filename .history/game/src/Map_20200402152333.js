@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-
-
+import Marker from './Marker';
 
 const mapStyles = {
   width: '73%',
@@ -10,10 +9,7 @@ const mapStyles = {
   borderRadius:'10px',
 
 };
-const markerstyle = {
-  color:'blue',
 
-};
   export class MapContainer extends Component {
     state = {
       showingInfoWindow: false,
@@ -49,8 +45,8 @@ const markerstyle = {
              onClick={this.onMapClicked}>
         <Marker
          onClick={this.onMarkerClick}
+         color={"blue"}
          title={'The marker`s title will appear as a tooltip.'}
-         style={markerstyle}
          name={'Boulevard Léopold III 2.3'}
          position={{lat: 50.870959, lng: 4.405819}}
                 />

@@ -12,18 +12,18 @@ import Title from './Title';
 
 
 // Generate Order Data
-function createData(id, street_light, what, status,light) {
-  return { street_light, status,what, light};
+function createData(id, street_light, status,light) {
+  return { street_light, status, light};
 }
 
 const rows = [
-  createData(0, 'Boulevard Avroy 1.9','Street light', 'ON', <Rectangle aspectRatio={[1,1]}>
+  createData(0, 'Boulevard Avroy 1.9', 'ON', <Rectangle aspectRatio={[3,3]}>
   <div style={{ background: '#008000',  width: '40%', height: '40%' }} />
 </Rectangle>),
-  createData(2, 'Rue de Londres 2.3','Street light', 'X',<Rectangle aspectRatio={[1,1]}>
-  <div style={{ background: '#FF0000', width: '40%', height: '40%' }} />
+  createData(1, 'Rue de Londres 2.1', 'OFF',<Rectangle aspectRatio={[3,3]}>
+  <div style={{ background: '#008000', width: '40%', height: '40%' }} />
 </Rectangle>),
-  createData(2, 'Rue de Londres 2.5','Pothole', 'X',<Rectangle aspectRatio={[1,1]}>
+  createData(2, 'Rue de Londres 2.3', 'X',<Rectangle aspectRatio={[3,3]}>
   <div style={{ background: '#FF0000', width: '40%', height: '40%' }} />
 </Rectangle>),
 ];
@@ -48,8 +48,7 @@ export default function LightStatus() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Location</TableCell>
-            <TableCell>Subject</TableCell>
+            <TableCell>street light</TableCell>
             <TableCell>status</TableCell>
             <TableCell></TableCell>
           </TableRow>

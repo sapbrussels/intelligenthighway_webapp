@@ -3,17 +3,19 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 
 
-const mapStyles = {
+const useStyles = makeStyles((theme) => ({
+   mapStyles: {
   width: '73%',
   height: '50%',
   padding: '20px',
   borderRadius:'10px',
+},
+  markerstyle: {
+    color:'blue',
+  
+  }
+}));
 
-};
-const markerstyle = {
-  color:'blue',
-
-};
   export class MapContainer extends Component {
     state = {
       showingInfoWindow: false,
@@ -38,6 +40,7 @@ const markerstyle = {
     };
    
     render() {
+      const classes = useStyles();
       return (
         <Map google={this.props.google}
              zoom={14}

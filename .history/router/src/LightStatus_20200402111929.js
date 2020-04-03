@@ -17,13 +17,16 @@ function createData(id, street_light, what, status,light) {
 }
 
 const rows = [
-  createData(0, 'Boulevard Avroy 1.9','Street light', 'ON', <Rectangle aspectRatio={[1,1]}>
+  createData(0, 'Boulevard Avroy 1.9','Street light', 'ON', <Rectangle aspectRatio={[3,3]}>
   <div style={{ background: '#008000',  width: '40%', height: '40%' }} />
 </Rectangle>),
-  createData(2, 'Rue de Londres 2.3','Street light', 'X',<Rectangle aspectRatio={[1,1]}>
+  createData(1, 'Rue de Londres 2.1','Street light', 'OFF',<Rectangle aspectRatio={[3,3]}>
+  <div style={{ background: '#008000', width: '40%', height: '40%' }} />
+</Rectangle>),
+  createData(2, 'Rue de Londres 2.3','Street light', 'X',<Rectangle aspectRatio={[3,3]}>
   <div style={{ background: '#FF0000', width: '40%', height: '40%' }} />
 </Rectangle>),
-  createData(2, 'Rue de Londres 2.5','Pothole', 'X',<Rectangle aspectRatio={[1,1]}>
+  createData(2, 'Rue de Londres 2.5','Pothole', 'X',<Rectangle aspectRatio={[3,3]}>
   <div style={{ background: '#FF0000', width: '40%', height: '40%' }} />
 </Rectangle>),
 ];
