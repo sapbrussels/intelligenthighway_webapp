@@ -24,16 +24,7 @@ client.subscribe('Streetlight');
 function createData(id, street_light, what, status,light) {
   return { street_light, status, what, light};
 }
-var note;
-  client.on('message', function (topic, message) {
-    note = message.toString();
-    // Updates React state with message 
-    setMesg(note);
-    console.log(note);
-    client.end();
-    });
-    
-const [mesg, setMesg] = useState(<Fragment><em>nothing heard</em></Fragment>);
+const [mesg] = useState(<Fragment><em>nothing heard</em></Fragment>);
 
 const rows = [
   createData(0, 'Boulevard Avroy 1.9','Street light', {mesg}, <Rectangle aspectRatio={[1,1]}>

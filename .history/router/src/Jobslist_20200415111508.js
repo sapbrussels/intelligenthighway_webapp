@@ -15,8 +15,8 @@ function createData(id, location, job, accept, info) {
 }
 
 const rows = [
-    createData(0, 'Boulevard Avroy 1.9', 'Maintenance',<Link to="/Maintenance"><Button variant="contained" color="primary">Accept</Button></Link>),
-    createData(1, 'Rue de Londres 2.1', 'Fix issue',<Button variant="contained" color="primary">Accept</Button>, <Link to="/Problempage"><Button variant="contained" color="primary">Info</Button></Link>),
+    createData(0, 'Boulevard Avroy 1.9', 'Maintenance',<Link to="/Maintenance"><Button>Accept</Button></Link>),
+    createData(1, 'Rue de Londres 2.1', 'Fix issue',<Button variant="contained" color="primary">Accept</Button>, <Link to="/Problempage"><Button variant="contained" color="primary">find more info</Button></Link>),
 ];
 
 function preventDefault(event) {

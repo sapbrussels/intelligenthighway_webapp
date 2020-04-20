@@ -63,7 +63,7 @@ function SignInSide() {
             <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
             </Avatar>
-            <Typography component="h2" variant="h5" >
+            <Typography component="h1" variant="h5">
             Sign in
             </Typography>
             <form className={classes.form} noValidate>

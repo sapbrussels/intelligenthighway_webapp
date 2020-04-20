@@ -19,21 +19,11 @@ var options = {
 var client = mqtt.connect('mqtt:Farmer.cloudmqtt:13365', options);
 client.subscribe('Streetlight');
 
-
+const [mesg] = useState(<Fragment><em>nothing heard</em></Fragment>);
 // Generate Order Data
 function createData(id, street_light, what, status,light) {
   return { street_light, status, what, light};
 }
-var note;
-  client.on('message', function (topic, message) {
-    note = message.toString();
-    // Updates React state with message 
-    setMesg(note);
-    console.log(note);
-    client.end();
-    });
-    
-const [mesg, setMesg] = useState(<Fragment><em>nothing heard</em></Fragment>);
 
 const rows = [
   createData(0, 'Boulevard Avroy 1.9','Street light', {mesg}, <Rectangle aspectRatio={[1,1]}>

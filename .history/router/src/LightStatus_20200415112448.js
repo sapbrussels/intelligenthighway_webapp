@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -10,33 +10,14 @@ import Rectangle from 'react-rectangle';
 import Title from './Title';
 
 
-var mqtt = require('mqtt');
-var options = {
-  protocol: 'mqtts',
-  mqttUser: 'caonegam',
-  mqttPassword: 'LkRI4RXywc0b'
-};
-var client = mqtt.connect('mqtt:Farmer.cloudmqtt:13365', options);
-client.subscribe('Streetlight');
-
 
 // Generate Order Data
 function createData(id, street_light, what, status,light) {
-  return { street_light, status, what, light};
+  return { street_light, status,what, light};
 }
-var note;
-  client.on('message', function (topic, message) {
-    note = message.toString();
-    // Updates React state with message 
-    setMesg(note);
-    console.log(note);
-    client.end();
-    });
-    
-const [mesg, setMesg] = useState(<Fragment><em>nothing heard</em></Fragment>);
 
 const rows = [
-  createData(0, 'Boulevard Avroy 1.9','Street light', {mesg}, <Rectangle aspectRatio={[1,1]}>
+  createData(0, 'Boulevard Avroy 1.9','Street light', 'ON', <Rectangle aspectRatio={[1,1]}>
   <div style={{ background: '#008000',  width: '40%', height: '40%' }} />
 </Rectangle>),
   createData(2, 'Rue de Londres 2.3','Street light', 'X',<Rectangle aspectRatio={[1,1]}>
