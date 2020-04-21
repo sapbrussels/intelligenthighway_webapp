@@ -14,7 +14,7 @@ class App extends Component {
 }
 
 export default () => (
-    <Connector mqttProps="ws://farmer.cloudmqtt.com:35330, 'caonegam', 'LkRI4RXywc0b'">
+    <Connector mqttProps="ws://test.mosquitto.org:8080">
         <App />
     </Connector>
 );
