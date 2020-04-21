@@ -1,18 +1,19 @@
 import React, { useState, Fragment } from 'react';
 import './App.css';
-import mqtt from 'mqtt';
 
+var mqtt = require('mqtt');
 var options = {
-	protocol: 'mqtts',
-	// clientId uniquely identifies client
-  // choose any string you wish
-  USERNAME : 'caonegam',
-  PASSWORD : 'LkRI4RXywc0b'
+    protocol: 'mqtt',
+    // clientId uniquely identifies client
+    // choose any string you wish
+    key:'caonegam',
+    cert:'LkRI4RXywc0b'
+
 };
-var client  = mqtt.connect('mqtt://farmer.cloudmqtt.com:13365', options);
+var client = mqtt.connect('mqtt://farmer.cloudmqtt.com:35330', options);
 
 // preciouschicken.com is the MQTT topic
-//client.subscribe('preciouschicken.com');
+client.subscribe('preciouschicken.com');
 
 function App() {
   var note;
@@ -26,20 +27,19 @@ function App() {
 
   // Sets default React state 
   const [mesg, setMesg] = useState(<Fragment><em>nothing heard</em></Fragment>);
-
   return (
     <div className="App">
     <header className="App-header">
     <h1>A taste of MQTT in React</h1>
     <p>The message is: {mesg}</p>
-		<p>
-		<a href="https://www.preciouschicken.com/blog/posts/a-taste-of-mqtt-in-react/"    
-		style={{
-			color: 'white'
-		}}>preciouschicken.com/blog/posts/a-taste-of-mqtt-in-react/</a>
-		</p>
-		</header>
-		</div>
+        <p>
+        <a href="https://www.preciouschicken.com/blog/posts/a-taste-of-mqtt-in-react/"    
+        style={{
+            color: 'white'
+        }}>preciouschicken.com/blog/posts/a-taste-of-mqtt-in-react/</a>
+        </p>
+        </header>
+        </div>
   );
 }
 

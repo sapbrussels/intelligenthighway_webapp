@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import './App.css';
-import mqtt from 'mqtt';
 
+var mqtt    = require('mqtt');
 var options = {
 	protocol: 'mqtts',
 	// clientId uniquely identifies client

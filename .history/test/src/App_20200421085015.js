@@ -1,15 +1,16 @@
 import React, { useState, Fragment } from 'react';
-import './App.css';
 import mqtt from 'mqtt';
+import './App.css';
 
-var options = {
+
+//var options = {
 	protocol: 'mqtts',
 	// clientId uniquely identifies client
   // choose any string you wish
   USERNAME : 'caonegam',
   PASSWORD : 'LkRI4RXywc0b'
-};
-var client  = mqtt.connect('mqtt://farmer.cloudmqtt.com:13365', options);
+//};
+var client  = mqtt.connect[{ host: 'farmer.cloudmqtt.com', port: 35330, username : 'caonegam', password :'LkRI4RXywc0b' }];
 
 // preciouschicken.com is the MQTT topic
 //client.subscribe('preciouschicken.com');
