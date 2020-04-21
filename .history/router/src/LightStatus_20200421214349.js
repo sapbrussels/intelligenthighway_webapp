@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, Fragment } from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -19,7 +19,7 @@ function createData(id, street_light, what, status,light) {
 
 
 const rows = [
-  createData(0, 'Boulevard Avroy 1.9','Street light', 'ON', <Rectangle aspectRatio={[1,1]}>
+  createData(0, 'Boulevard Avroy 1.9','Street light', {mesg}, <Rectangle aspectRatio={[1,1]}>
   <div style={{ background: '#008000',  width: '40%', height: '40%' }} />
 </Rectangle>),
   createData(2, 'Rue de Londres 2.3','Street light', 'X',<Rectangle aspectRatio={[1,1]}>
