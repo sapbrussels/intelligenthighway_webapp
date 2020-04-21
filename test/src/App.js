@@ -14,7 +14,15 @@ class App extends Component {
 }
 
 export default () => (
-    <Connector mqttProps="ws://farmer.cloudmqtt.com:35330, 'caonegam', 'LkRI4RXywc0b'">
+    <Connector mqttProps={{
+      host: "farmer.cloudmqtt.com",
+      protocol: "wss",
+      clientId: "4ewf6wegwe",
+      port: 35330,
+      username: 'lmxssblr',
+      password: 'Rrtmo0N4p01v',
+      rejectUnauthorized: false
+    }}>
         <App />
     </Connector>
 );
