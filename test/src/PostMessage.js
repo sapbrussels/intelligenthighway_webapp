@@ -20,5 +20,5 @@ export class PostMessage extends React.Component {
 }
 
 export default subscribe({
-    topic: 'Streetlight'
+    topic: 'streetlight'
 })(PostMessage)
