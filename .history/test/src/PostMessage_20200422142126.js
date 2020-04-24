@@ -7,7 +7,7 @@ export class PostMessage extends React.Component {
         e.preventDefault();
         //MQTT client is passed on
         const { mqtt } = this.props;
-        mqtt.publish('streetlight', 'My Message');
+        mqtt.publish('Streetlight', 'My Message');
     }
 
     render() {
@@ -20,5 +20,5 @@ export class PostMessage extends React.Component {
 }
 
 export default subscribe({
-    topic: 'streetlight'
+    topic: 'Streetlight'
 })(PostMessage)
