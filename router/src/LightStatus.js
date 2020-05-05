@@ -7,9 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { Connector } from 'mqtt-react';
 import Title from './Title';
-import LED1status from './LED1status';
-import LED2status from './LED2status';
-import LED3status from './LED3status';
+import LEDstatus from './LEDstatus';
 import PostMessage from './PostMessage';
 
 
@@ -28,9 +26,9 @@ function createData(id, street_light, status, working,light) {
 
 
 const rows = [
-  createData(0, 'Boulevard Avroy 1.9',<LED1status/>,'yes'),
-  createData(1, 'Rue de Londres 2.3',<LED2status/>,'yes'),
-  createData(2, 'Rue de Londres 2.5',<LED3status/>,'no'),
+  createData(0, 'Boulevard Avroy 1.9',<LEDstatus id='1'/>,'yes'),
+  createData(1, 'Rue de Londres 2.3',<LEDstatus id='2'/>,'yes'),
+  createData(2, 'Rue de Londres 2.5',<LEDstatus id='3'/>,'no'),
 ];
 
 
