@@ -17,24 +17,14 @@ class LEDstatus extends React.Component {
     if(this.props.data && this.props.data.length > 0) {
       const data = this.props.data;
       const lastData = data[0]
-      
-                                                                                      /* check 
+
+      if(this.props.id === lastData.id && this.state.lastStatus !== lastData.status) { /* check 
                                                                                        to see if the current 
                                                                                        status if different 
-                                                                                       to the previous status */ 
-      if(this.props.id === lastData.id && this.state.lastStatus !== lastData.status) { 
-        this.setState({
-          lastStatus: lastData.status
-        })
-        lastStatus : <Rectangle aspectRatio={[5, 3]}>
-       <div style={{ background: '#00FF00', width: '50%', height: '40%' }} />
-     </Rectangle>
+                                                                                       to the previous status*/
+        
+      }
       
-      }else 
-      <Rectangle aspectRatio={[5, 3]}>
-       <div style={{ background: '#FF0000', width: '50%', height: '40%' }} />
-     </Rectangle>
-
     }
   }
 
