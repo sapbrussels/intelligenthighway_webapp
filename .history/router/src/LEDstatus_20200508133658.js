@@ -1,6 +1,7 @@
 import React from 'react';
 import { subscribe } from 'mqtt-react';
-import Rectangle from 'react-rectangle';
+import {Rectangle } from 'react-rectangle';
+
 
 //
 class LEDstatus extends React.Component {
@@ -8,7 +9,7 @@ class LEDstatus extends React.Component {
     super();
     this.state = {
       lastStatus: <Rectangle aspectRatio={[5, 3]}>
-      <div style={{ background: '#FF0000', width: '50%', height: '40%' }} />
+      <div style={{ background: '#607d8b', width: '100%', height: '100%' }} />
     </Rectangle>
     }
   }
@@ -22,6 +23,16 @@ class LEDstatus extends React.Component {
         this.setState({
           lastStatus: lastData.status
         })
+        if (lastData.status === "off")
+        {
+          lastData.status= <Rectangle aspectRatio={[5, 3]}>
+          <div style={{ background: '#607d8b', width: '100%', height: '100%' }} />
+        </Rectangle>
+        }else
+        lastData.status= <Rectangle aspectRatio={[5, 3]}>
+        <div style={{ background: '#607d8b', width: '100%', height: '100%' }} />
+      </Rectangle>
+
       }
     }
   }

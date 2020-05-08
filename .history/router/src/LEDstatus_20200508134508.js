@@ -7,7 +7,7 @@ class LEDstatus extends React.Component {
   constructor(){
     super();
     this.state = {
-      lastStatus: <Rectangle aspectRatio={[5, 3]}>
+      lastStatus: <Rectangle aspectRatio={[3, 5]}>
       <div style={{ background: '#FF0000', width: '50%', height: '40%' }} />
     </Rectangle>
     }
