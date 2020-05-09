@@ -1,0 +1,6 @@
+---
+application:
+  name : intelligenthighway_webapp
+  memory: 128M
+  path :  /Users/garage/Documents/GitHub/intelligenthighway_webapp/router
+  instances: 1

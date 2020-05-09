@@ -1,0 +1,7 @@
+---
+applications:
+- name: intelligenthighway_webapp
+  buildpack: nodejs_buildpack
+  command: yarn start
+  memory: 512M
+  disk_quota: 512Mc

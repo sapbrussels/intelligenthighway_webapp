@@ -1,0 +1,6 @@
+---
+applications:
+- name: router
+  random-route: true
+  path: router
+  memory: 128M

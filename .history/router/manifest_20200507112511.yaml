@@ -1,0 +1,5 @@
+---
+application:
+  name : router
+  memory: 64m
+  instances: 1

@@ -1,0 +1,6 @@
+---
+applications:
+- name: router
+  random-route: true
+  path: intelligenthighway_webapp
+  memory: 128M

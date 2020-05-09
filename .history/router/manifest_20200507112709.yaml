@@ -1,0 +1,6 @@
+---
+application:
+  name : intelligenthighway_webapp
+  memory: 64m
+  path : router
+  instances: 1

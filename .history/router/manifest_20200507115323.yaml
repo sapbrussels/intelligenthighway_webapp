@@ -1,0 +1,7 @@
+applications:
+- name: intelligenthighway_webapp
+  buildpack: nodejs_buildpack
+  path : /Users/garage/Documents/GitHub/intelligenthighway_webapp/router
+  command: yarn start
+  memory: 512M
+  disk_quota: 512Mc
