@@ -44,7 +44,7 @@ export default function LightStatus() {
   const classes = useStyles();
   return (
     <Connector mqttProps={{
-      host: "35.195.197.206",
+      host: "vernemq.verstraeten.io",
       protocol: "ws",
       clientId: "4ewf6wegwe",
       port: 8080,
