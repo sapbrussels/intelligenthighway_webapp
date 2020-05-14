@@ -7,7 +7,7 @@ export class PostMessage extends React.Component {
       e.preventDefault();
       //MQTT client is passed on
       const { mqtt } = this.props;
-      mqtt.publish('indicativelight', 'on');
+      mqtt.publish('indicativelight', 'off');
   }
 
   render() {
